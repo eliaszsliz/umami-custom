@@ -10,7 +10,7 @@ services:
       - APP_SECRET=$SERVICE_PASSWORD_64_UMAMI
     labels:
       - 'traefik.http.middlewares.allow-iframes.headers.customResponseHeaders.Content-Security-Policy=frame-ancestors https://app.devdomello.local https://app.domello.club'
-      - 'traefik.http.routers.http-0-qb96vmrb30g9odskpcmz5e4l-umami.middlewares=redirect-to-https,allow-iframes'
+      - 'traefik.http.routers.http-0-q70rex514u62ahiexn0n196e-umami.middlewares=redirect-to-https,allow-iframes'
     depends_on:
       postgresql:
         condition: service_healthy
