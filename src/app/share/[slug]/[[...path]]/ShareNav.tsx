@@ -156,7 +156,7 @@ export function ShareNav({
         alignItems="center"
         justifyContent={collapsed ? 'center' : 'space-between'}
       >
-        /* {!collapsed && <ShareBranding size="md" />} */
+        {/* !collapsed && <ShareBranding size="md" /> */}
         {!onItemClick && (
           <Button variant="quiet" onPress={() => onCollapse?.(!collapsed)}>
             <Icon color="muted">
