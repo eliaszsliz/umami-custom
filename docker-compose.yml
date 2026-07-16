@@ -8,3 +8,6 @@ services:
       - 'DATABASE_URL=$UMAMI_DATABASE_URL'
       - DATABASE_TYPE=postgres
       - APP_SECRET=$SERVICE_PASSWORD_64_UMAMI
+    labels:
+      - 'traefik.http.middlewares.allow-iframes.headers.customResponseHeaders.Content-Security-Policy=frame-ancestors https://app.devdomello.local https://app.domello.club'
+      - 'traefik.http.routers.http-0-q70rex514u62ahiexn0n196e-umami.middlewares=redirect-to-https,allow-iframes'
