@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - SERVICE_URL_UMAMI_3000
-      - 'DATABASE_URL=postgres://$SERVICE_USER_POSTGRES:$SERVICE_PASSWORD_POSTGRES@$SERVICE_HOSTNAME:5432/$POSTGRES_DB'
+      - 'DATABASE_URL=$UMAMI_DATABASE_URL'
       - DATABASE_TYPE=postgres
       - APP_SECRET=$SERVICE_PASSWORD_64_UMAMI
 
